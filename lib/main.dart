@@ -46,17 +46,15 @@ class Counter with ChangeNotifier {
   // Get message based on the age
   String getAgeMessage() {
     if (value >= 0 && value <= 12) {
-      return "Childhood";
+      return "You're a child!";
     } else if (value >= 13 && value <= 19) {
-      return "Teenage Years";
+      return "Teenager Time!";
     } else if (value >= 20 && value <= 30) {
-      return "Young Adult";
-    } else if (value >= 31 && value <= 40) {
-      return "Adulthood";
-    } else if (value >= 41 && value <= 60) {
-      return "Mature Adult";
+      return "You're a young adult!";
+    } else if (value >= 31 && value <= 50) {
+      return "You're an adult now!";
     } else {
-      return "Senior";
+      return "Golden Years!";
     }
   }
 
@@ -68,10 +66,8 @@ class Counter with ChangeNotifier {
       return Colors.green.shade100;
     } else if (value >= 20 && value <= 30) {
       return Colors.orange.shade100;
-    } else if (value >= 31 && value <= 40) {
+    } else if (value >= 31 && value <= 50) {
       return Colors.yellow.shade100;
-    } else if (value >= 41 && value <= 60) {
-      return Colors.purple.shade100;
     } else {
       return Colors.grey.shade300;
     }
